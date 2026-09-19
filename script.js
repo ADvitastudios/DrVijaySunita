@@ -134,7 +134,7 @@ function initScrollAnimations() {
    4. Milestone Counter Calculation
    -------------------------------------------------------------------------- */
 function initMilestoneCounters() {
-    const startDate = new Date('1980-09-19T00:00:00');
+    const startDate = new Date('1983-09-19T00:00:00');
     const now = new Date();
     
     const diffTime = Math.abs(now - startDate);

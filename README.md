@@ -1,6 +1,6 @@
-# 💍 Dr. Vijay Aggarwal & Dr. Sunita Aggarwal — 46th Marriage Anniversary Website
+# 💍 Dr. Vijay Aggarwal & Dr. Sunita Aggarwal — 43rd Marriage Anniversary Website
 
-An elegant, classic, responsive website celebrating **46 Sapphire Years of Togetherness** (1980 – 2026) for **Dr. Vijay Aggarwal (Pediatrician)** & **Dr. Sunita Aggarwal (Gynaecologist)** from Narwana, Haryana.
+An elegant, classic, responsive website celebrating **43 Sapphire Years of Togetherness** (1983 – 2026) for **Dr. Vijay Aggarwal (Pediatrician)** & **Dr. Sunita Aggarwal (Gynaecologist)** from Narwana, Haryana.
 
 Designed for **100% free hosting** on **GitHub Pages**, **Netlify**, or **Vercel** with zero build tools or server setup.
 
@@ -11,7 +11,7 @@ Designed for **100% free hosting** on **GitHub Pages**, **Netlify**, or **Vercel
 - 📱 **Mobile & App Responsive**: Tested across small phones (320px+), tablets, laptops, and desktop screens.
 - 🎨 **Classic Royal Aesthetic**: Elegant cream, gold, and deep crimson palette with Google Fonts (`Playfair Display`, `Cormorant Garamond`, `Great Vibes`).
 - ✨ **Smooth Animations**: Floating rose petals/sparkles canvas, smooth scroll reveal observers, and rotating vinyl ambient music player.
-- 🎓 **Personalized Medical Couple Story**: Highlighting their GMC Patiala college days, love marriage in 1980, and decades of medical service in Narwana.
+- 🎓 **Personalized Medical Couple Story**: Highlighting their GMC Patiala college days, love marriage in 1983, and decades of medical service in Narwana.
 - 💖 **Interactive Wish Wall**: Visitors, friends, and family can post blessings saved persistently in local storage.
 - 📸 **Photo Gallery Ready**: Includes handsome placeholder artwork and simple instructions to upload real photos.
 
@@ -48,7 +48,7 @@ Designed for **100% free hosting** on **GitHub Pages**, **Netlify**, or **Vercel
 # 1. Initialize git in this directory
 git init
 git add .
-git commit -m "Initial commit for 46th anniversary website"
+git commit -m "Initial commit for 43rd anniversary website"
 
 # 2. Link your remote repository and push
 git remote add origin https://github.com/<your-github-username>/marriageanniversary.git
@@ -66,7 +66,7 @@ Then turn on Pages in GitHub Repository -> Settings -> Pages.
    - `images/photo1.jpg` (Patiala College days)
    - `images/photo2.jpg` (Wedding Day)
    - `images/photo3.jpg` (Narwana Medical Practice)
-   - `images/photo4.jpg` (46th Anniversary Celebration)
+   - `images/photo4.jpg` (43rd Anniversary Celebration)
 3. In `index.html`, replace the placeholder art lines inside `<div class="gallery-img-wrapper">`:
    ```html
    <!-- Replace the placeholder div with: -->
@@ -87,4 +87,4 @@ The website includes a built-in classical ambient music synthesizer using the We
 - **CSS3** (Flexbox, CSS Grid, Custom Properties, Keyframe Animations)
 - **Vanilla JavaScript** (ES6, Canvas API, IntersectionObserver API, Web Audio API, LocalStorage)
 
-Designed with love for **Dr. Vijay Aggarwal & Dr. Sunita Aggarwal** on their **46th Marriage Anniversary**! 🌹
+Designed with love for **Dr. Vijay Aggarwal & Dr. Sunita Aggarwal** on their **43rd Marriage Anniversary**! 🌹
