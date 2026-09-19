@@ -106,25 +106,28 @@ a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: #FFFFFF;
-    box-shadow: var(--shadow-soft);
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+    color: var(--color-text-dark);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--color-gold-light);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(122, 28, 44, 0.3);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
 }
 
 .btn-outline {
-    background: transparent;
-    border-color: var(--color-gold-dark);
-    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-color: var(--color-gold-light);
+    color: #FFFFFF;
 }
 
 .btn-outline:hover {
-    background: var(--color-gold-light);
-    color: var(--color-primary);
+    background: var(--color-gold);
+    color: var(--color-text-dark);
     transform: translateY(-3px);
 }
 
@@ -176,15 +179,15 @@ a {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(250, 246, 240, 0.92);
+    background: rgba(250, 246, 240, 0.94);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
     transition: var(--transition);
 }
 
 .site-header.scrolled {
     padding: 0.3rem 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header-container {
@@ -306,18 +309,19 @@ a {
     transition: var(--transition);
 }
 
-/* Hero Section */
+/* Hero Section with Vibrant Background Image */
 .hero-section {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 1.5rem 60px;
+    padding: 130px 1.5rem 70px;
     text-align: center;
-    background: radial-gradient(circle at center, #FFFDF9 0%, #F5ECE0 100%);
+    background: linear-gradient(180deg, rgba(25, 6, 12, 0.72) 0%, rgba(90, 20, 32, 0.65) 50%, rgba(20, 5, 10, 0.85) 100%), url('photos/vijay sunita.jpeg') center/cover no-repeat fixed;
     overflow: hidden;
     z-index: 2;
+    color: #FFFFFF;
 }
 
 .hero-content {
@@ -328,18 +332,18 @@ a {
 
 .hero-portrait-container {
     margin: 0 auto 1.5rem;
-    width: 170px;
-    height: 170px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     padding: 6px;
-    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-primary) 100%);
-    box-shadow: 0 15px 35px rgba(122, 28, 44, 0.25);
+    background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 50%, var(--color-primary) 100%);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(212, 175, 55, 0.6);
     transition: var(--transition);
 }
 
 .hero-portrait-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 45px rgba(212, 175, 55, 0.4);
+    transform: scale(1.06);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.7);
 }
 
 .hero-portrait-img {
@@ -361,37 +365,40 @@ a {
 .ornamental-line {
     height: 1px;
     width: 60px;
-    background: linear-gradient(90deg, transparent, var(--color-gold-dark), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-gold-light), transparent);
 }
 
 .hero-subtitle {
     font-family: var(--font-subheading);
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.15rem, 2.5vw, 1.55rem);
     font-style: italic;
-    color: var(--color-gold-dark);
-    letter-spacing: 1px;
+    color: var(--color-gold-light);
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-names {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    font-size: clamp(2.6rem, 6.5vw, 5rem);
     font-weight: 700;
-    color: var(--color-primary);
+    color: #FFFFFF;
     margin-bottom: 1rem;
     letter-spacing: -0.5px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .hero-names .ampersand {
     font-family: var(--font-script);
-    color: var(--color-gold-dark);
+    color: var(--color-gold-light);
     font-weight: 400;
     margin: 0 0.4rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
 }
 
 .hero-professions {
     font-size: clamp(0.95rem, 2vw, 1.15rem);
     font-weight: 600;
-    color: var(--color-text-dark);
+    color: #FFFFFF;
     margin-bottom: 0.6rem;
     display: flex;
     align-items: center;
@@ -401,45 +408,52 @@ a {
 }
 
 .profession-tag {
-    background: rgba(122, 28, 44, 0.06);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
     padding: 0.3rem 0.9rem;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero-location {
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.8rem;
     font-weight: 500;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .anniversary-date-card {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    background: var(--color-card);
-    border: 1px solid var(--color-gold);
-    padding: 0.6rem 1.4rem;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid var(--color-gold-light);
+    padding: 0.65rem 1.6rem;
     border-radius: var(--radius-full);
     margin-bottom: 2rem;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .date-text {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     font-weight: 600;
-    color: var(--color-primary);
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
 }
 
-.hero-quote {
+.hero-quote.bold-quote {
     font-family: var(--font-subheading);
-    font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+    font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+    font-weight: 700;
     font-style: italic;
-    color: var(--color-text-muted);
-    max-width: 750px;
+    color: #FFFDF9;
+    max-width: 800px;
     margin: 0 auto 2.5rem;
-    position: relative;
+    line-height: 1.6;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
 .hero-actions {
@@ -456,7 +470,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-gold-light);
     animation: bounce 2s infinite;
     z-index: 3;
 }
@@ -467,70 +481,7 @@ a {
     60% { transform: translate(-50%, -5px); }
 }
 
-/* Milestones Section */
-.milestones-section {
-    padding: 90px 0;
-    background: var(--color-card);
-    position: relative;
-    z-index: 2;
-}
-
-.counter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-}
-
-.counter-card {
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: 2.2rem 1.5rem;
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.counter-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-gold), var(--color-primary));
-}
-
-.counter-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--color-gold);
-}
-
-.counter-icon {
-    font-size: 2.2rem;
-    margin-bottom: 0.8rem;
-}
-
-.counter-value {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-.counter-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Story Timeline Section */
+/* Story Timeline Section with Rich Warm Cards */
 .story-section {
     padding: 100px 0;
     background: var(--color-bg-alt);
@@ -597,41 +548,46 @@ a {
     left: -25px;
 }
 
+/* Upgraded Rich Card Styling for Journey Timeline */
 .timeline-content {
-    background: var(--color-card);
-    padding: 1.8rem 2rem;
+    background: linear-gradient(135deg, #FFFDF9 0%, #FAF0E4 100%);
+    padding: 2rem 2.2rem;
     border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--color-gold-light);
+    border-left: 5px solid var(--color-gold);
+    box-shadow: 0 10px 25px rgba(122, 28, 44, 0.08), 0 0 15px rgba(212, 175, 55, 0.1);
     transition: var(--transition);
 }
 
 .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(122, 28, 44, 0.18), 0 0 25px rgba(212, 175, 55, 0.3);
     border-color: var(--color-gold);
 }
 
 .timeline-year {
     display: inline-block;
-    background: rgba(122, 28, 44, 0.08);
-    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: #FFFFFF;
     font-size: 0.85rem;
     font-weight: 700;
-    padding: 0.2rem 0.8rem;
+    padding: 0.25rem 0.9rem;
     border-radius: var(--radius-full);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 4px 10px rgba(122, 28, 44, 0.2);
 }
 
 .timeline-title {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
+    color: var(--color-primary);
     margin-bottom: 0.6rem;
 }
 
 .timeline-content p {
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
+    font-size: 0.96rem;
+    color: var(--color-text-dark);
+    line-height: 1.6;
 }
 
 /* Family Section */
@@ -868,6 +824,69 @@ a {
     font-size: 0.78rem;
     color: var(--color-text-muted);
     text-align: right;
+}
+
+/* Milestones Section (Below Wish Wall) */
+.milestones-section {
+    padding: 90px 0;
+    background: var(--color-bg-alt);
+    position: relative;
+    z-index: 2;
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.counter-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-primary));
+}
+
+.counter-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-gold);
+}
+
+.counter-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.counter-value {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.counter-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Lightbox Modal */
