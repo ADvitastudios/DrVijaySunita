@@ -548,7 +548,6 @@ a {
     left: -25px;
 }
 
-/* Upgraded Rich Card Styling for Journey Timeline */
 .timeline-content {
     background: linear-gradient(135deg, #FFFDF9 0%, #FAF0E4 100%);
     padding: 2rem 2.2rem;
@@ -590,10 +589,130 @@ a {
     line-height: 1.6;
 }
 
+/* Verses of Love & Friendship Section */
+.poems-section {
+    padding: 100px 0;
+    background: var(--color-card);
+    position: relative;
+    z-index: 2;
+}
+
+.featured-poem-card {
+    background: linear-gradient(135deg, #FFFDF9 0%, #FAF1E4 100%);
+    border: 2px solid var(--color-gold);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 3rem;
+    margin-bottom: 2.8rem;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--shadow-gold);
+}
+
+.featured-poem-card.family-union-card {
+    background: linear-gradient(135deg, #FAF1E4 0%, #F5E5D0 100%);
+    border-color: var(--color-primary-light);
+    margin-top: 2.8rem;
+    margin-bottom: 0;
+}
+
+.poem-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: var(--color-gold-light);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 1.4rem;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    box-shadow: 0 4px 12px rgba(122, 28, 44, 0.25);
+}
+
+.poem-header h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+}
+
+.poem-byline {
+    font-family: var(--font-subheading);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--color-gold-dark);
+    margin-bottom: 2rem;
+}
+
+.poem-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.poem-stanza {
+    font-family: var(--font-subheading);
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    font-style: italic;
+    color: var(--color-text-dark);
+    line-height: 1.8;
+}
+
+.dual-poems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.2rem;
+}
+
+.poem-card-sub {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 2.2rem 2rem;
+    border-top: 4px solid var(--color-gold);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.poem-card-sub:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-gold);
+}
+
+.poem-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.poem-card-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+.poem-card-header h4 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 0.1rem;
+}
+
+.poem-tagline {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-gold-dark);
+}
+
 /* Family Section */
 .family-section {
     padding: 100px 0;
-    background: var(--color-card);
+    background: var(--color-bg-alt);
     position: relative;
     z-index: 2;
 }
@@ -695,7 +814,7 @@ a {
 /* Gallery Section */
 .gallery-section {
     padding: 100px 0;
-    background: var(--color-bg-alt);
+    background: var(--color-card);
     position: relative;
     z-index: 2;
 }
@@ -759,7 +878,7 @@ a {
 /* Wishes & Blessings Wall Section */
 .wishes-section {
     padding: 100px 0;
-    background: var(--color-card);
+    background: var(--color-bg-alt);
     position: relative;
     z-index: 2;
 }
@@ -771,7 +890,7 @@ a {
 }
 
 .wish-card {
-    background: var(--color-bg);
+    background: var(--color-card);
     padding: 1.8rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
@@ -829,7 +948,7 @@ a {
 /* Milestones Section (Below Wish Wall) */
 .milestones-section {
     padding: 90px 0;
-    background: var(--color-bg-alt);
+    background: var(--color-card);
     position: relative;
     z-index: 2;
 }
@@ -841,7 +960,7 @@ a {
 }
 
 .counter-card {
-    background: var(--color-card);
+    background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: 2.2rem 1.5rem;
@@ -1010,6 +1129,10 @@ a {
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
+    .featured-poem-card {
+        padding: 2.2rem 1.5rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 75px;
