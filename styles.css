@@ -606,13 +606,52 @@ a {
     text-align: center;
     position: relative;
     box-shadow: var(--shadow-gold);
+    overflow: hidden;
 }
 
+/* Featured Tribute Card with Background Photo: vijay sunita 2.jpeg */
+.featured-poem-card.tribute-card {
+    background: linear-gradient(180deg, rgba(20, 5, 12, 0.82) 0%, rgba(90, 20, 32, 0.78) 50%, rgba(15, 3, 8, 0.88) 100%), url('photos/vijay sunita 2.jpeg') center/cover no-repeat;
+    color: #FFFFFF;
+}
+
+.featured-poem-card.tribute-card .poem-header h3 {
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.featured-poem-card.tribute-card .poem-byline {
+    color: var(--color-gold-light);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.featured-poem-card.tribute-card .poem-stanza {
+    color: #FFFDF9;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Family Union Card with Fixed Parallax Background Photo: family & friends.jpeg */
 .featured-poem-card.family-union-card {
-    background: linear-gradient(135deg, #FAF1E4 0%, #F5E5D0 100%);
-    border-color: var(--color-primary-light);
+    background: linear-gradient(180deg, rgba(15, 4, 8, 0.82) 0%, rgba(85, 18, 30, 0.78) 50%, rgba(15, 4, 8, 0.9) 100%), url('photos/family & friends.jpeg') center/cover no-repeat fixed;
+    border-color: var(--color-gold-light);
     margin-top: 2.8rem;
     margin-bottom: 0;
+    color: #FFFFFF;
+}
+
+.featured-poem-card.family-union-card .poem-header h3 {
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.featured-poem-card.family-union-card .poem-byline {
+    color: var(--color-gold-light);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.featured-poem-card.family-union-card .poem-stanza {
+    color: #FFFDF9;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .poem-badge {
@@ -629,6 +668,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 1.2px;
     box-shadow: 0 4px 12px rgba(122, 28, 44, 0.25);
+    z-index: 5;
 }
 
 .poem-header h3 {
@@ -673,6 +713,29 @@ a {
     border-top: 4px solid var(--color-gold);
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
+    overflow: hidden;
+}
+
+/* Suman to Sunita Card with Background Photo: suman & sunita 2.jpeg */
+.poem-card-sub.suman-sunita-card {
+    background: linear-gradient(180deg, rgba(20, 5, 12, 0.82) 0%, rgba(80, 18, 30, 0.78) 100%), url('photos/suman & sunita 2.jpeg') center/cover no-repeat;
+    color: #FFFFFF;
+    border-color: var(--color-gold);
+}
+
+.poem-card-sub.suman-sunita-card .poem-card-header h4 {
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.poem-card-sub.suman-sunita-card .poem-tagline {
+    color: var(--color-gold-light);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.poem-card-sub.suman-sunita-card .poem-stanza {
+    color: #FFFDF9;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .poem-card-sub:hover {
