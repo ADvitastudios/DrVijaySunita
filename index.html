@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46 Years of Love | Dr. Vijay & Dr. Sunita Aggarwal</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta name="description" content="Celebrating 46 Years of Love, Medicine & Family Togetherness - Dr. Vijay Aggarwal & Dr. Sunita Aggarwal. 19th September 1980 - 2026.">
+    <meta property="og:title" content="46th Marriage Anniversary | Dr. Vijay & Dr. Sunita Aggarwal">
+    <meta property="og:description" content="46 Golden Years of Togetherness from Patiala Medical College to Narwana, Haryana.">
+    <meta property="og:image" content="photos/vijay sunita.jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Floating Canvas Background for Rose Petals & Golden Stars -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <span class="initials">V & S</span>
+                <span class="milestone-badge">46 Years</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#story" class="nav-link">Our Story</a>
+                <a href="#family" class="nav-link">Our Family</a>
+                <a href="#milestones" class="nav-link">46 Years</a>
+                <a href="#gallery" class="nav-link">Memories</a>
+                <a href="#wishes" class="nav-link">Blessings</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="music-toggle-btn" id="musicToggle" aria-label="Toggle Background Music">
+                    <span class="music-icon" id="musicIcon">🎵</span>
+                    <span class="music-text">Play Music</span>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-portrait-container">
+                    <img src="photos/vijay sunita.jpeg" alt="Dr. Vijay & Dr. Sunita Aggarwal" class="hero-portrait-img">
+                </div>
+
+                <div class="classic-badge-container">
+                    <div class="ornamental-line"></div>
+                    <span class="hero-subtitle">Celebrating 46 Sapphire Years of Togetherness</span>
+                    <div class="ornamental-line"></div>
+                </div>
+
+                <h1 class="hero-names">
+                    Dr. Vijay Aggarwal
+                    <span class="ampersand">&</span>
+                    Dr. Sunita Aggarwal
+                </h1>
+
+                <p class="hero-professions">
+                    <span class="profession-tag">🩺 Pediatrician</span>
+                    <span class="bullet">•</span>
+                    <span class="profession-tag">🩺 Gynaecologist</span>
+                </p>
+
+                <p class="hero-location">
+                    📍 Narwana, Haryana &nbsp;|&nbsp; 🎓 GMC Patiala Alumni
+                </p>
+
+                <div class="anniversary-date-card">
+                    <span class="date-icon">💍</span>
+                    <span class="date-text">September 19, 1980 — September 19, 2026</span>
+                </div>
+
+                <blockquote class="hero-quote">
+                    "Two hearts that met in medical college, two hands that healed thousands, and one eternal bond of 46 glorious years surrounded by a loving family."
+                </blockquote>
+
+                <div class="hero-actions">
+                    <a href="#story" class="btn btn-primary">Discover Our Journey</a>
+                    <a href="#wishes" class="btn btn-outline">Read Family Blessings</a>
+                </div>
+            </div>
+            
+            <a href="#milestones" class="scroll-down-indicator" aria-label="Scroll down">
+                <span class="arrow">↓</span>
+            </a>
+        </section>
+
+        <!-- Live Milestone Counter Section -->
+        <section class="milestones-section" id="milestones">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="section-tag">A LIFETIME OF LOVE</span>
+                    <h2 class="section-title">46 Years Completed Today</h2>
+                    <div class="gold-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="counter-grid">
+                    <div class="counter-card" data-aos="fade-up">
+                        <div class="counter-icon">👑</div>
+                        <div class="counter-value" id="yearsCount">46</div>
+                        <div class="counter-label">Years of Harmony</div>
+                    </div>
+                    <div class="counter-card" data-aos="fade-up" data-delay="100">
+                        <div class="counter-icon">🌙</div>
+                        <div class="counter-value" id="monthsCount">552</div>
+                        <div class="counter-label">Months of Joy</div>
+                    </div>
+                    <div class="counter-card" data-aos="fade-up" data-delay="200">
+                        <div class="counter-icon">☀️</div>
+                        <div class="counter-value" id="daysCount">16,801</div>
+                        <div class="counter-label">Days Together</div>
+                    </div>
+                    <div class="counter-card" data-aos="fade-up" data-delay="300">
+                        <div class="counter-icon">🩺</div>
+                        <div class="counter-value">Countless</div>
+                        <div class="counter-label">Lives Healed Together</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Timeline Section -->
+        <section class="story-section" id="story">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="section-tag">OUR JOURNEY</span>
+                    <h2 class="section-title">From Patiala Medical College to Narwana</h2>
+                    <p class="section-subtitle">A Love Story Built on Medicine, Compassion & Devotion</p>
+                    <div class="gold-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Chapter 1 -->
+                    <div class="timeline-item left" data-aos="fade-right">
+                        <div class="timeline-icon">🎓</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">1970s • Patiala</span>
+                            <h3 class="timeline-title">Where it All Began — GMC Patiala</h3>
+                            <p>
+                                Across lecture halls, medical rounds, and campus corridors at Government Medical College, Patiala, two passionate young doctors met. A deep friendship blossomed into a timeless love story.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2 -->
+                    <div class="timeline-item right" data-aos="fade-left">
+                        <div class="timeline-icon">💍</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">September 19, 1980</span>
+                            <h3 class="timeline-title">The Grand Love Marriage</h3>
+                            <p>
+                                With blessings and joy, Dr. Vijay & Dr. Sunita tied the knot in a beautiful love marriage, promising to walk side-by-side as life partners and medical companions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3 -->
+                    <div class="timeline-item left" data-aos="fade-right">
+                        <div class="timeline-icon">🏥</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">1980s – Present • Narwana</span>
+                            <h3 class="timeline-title">Healing the Community of Narwana</h3>
+                            <p>
+                                Settling in Narwana (Haryana), Dr. Vijay became the trusted Pediatrician bringing smiles to countless children, while Dr. Sunita became the cherished Gynaecologist bringing new life into the world.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 4 -->
+                    <div class="timeline-item right" data-aos="fade-left">
+                        <div class="timeline-icon">👨‍👩‍👦</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">Generations of Love</span>
+                            <h3 class="timeline-title">A Blessed Family & Grandson Agam</h3>
+                            <p>
+                                Their home expanded with warmth and joy with their son Ajay, daughter-in-law Shuchi, and the delight of their grandson Agam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 5 -->
+                    <div class="timeline-item left" data-aos="fade-right">
+                        <div class="timeline-icon">🌟</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">September 19, 2026</span>
+                            <h3 class="timeline-title">46 Glorious Years Completed Today</h3>
+                            <p>
+                                Today marks 46 incredible years of shared laughter, medical service, family pride, and unbreakable love. May their bond continue to shine bright forever!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Loving Family Section -->
+        <section class="family-section" id="family">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="section-tag">FAMILY LEGACY</span>
+                    <h2 class="section-title">Generations of Love</h2>
+                    <p class="section-subtitle">The Pillars & Sunshine of Dr. Vijay & Dr. Sunita Aggarwal's Family</p>
+                    <div class="gold-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="family-grid">
+                    <!-- Parents Card -->
+                    <div class="family-card highlight-card" data-aos="fade-up">
+                        <div class="family-badge">Head of Family</div>
+                        <div class="family-avatar">
+                            <img src="photos/vijay sunita.jpeg" alt="Dr. Vijay & Dr. Sunita Aggarwal" class="family-avatar-img">
+                        </div>
+                        <h3 class="family-name">Dr. Vijay & Dr. Sunita Aggarwal</h3>
+                        <p class="family-role">Pediatrician & Gynaecologist</p>
+                        <p class="family-desc">
+                            Celebrating 46 Years of Love, Healing & Inspiring Parenthood.
+                        </p>
+                        <div class="family-meta">
+                            <span>💍 Marriage: 19th September 1980</span>
+                        </div>
+                    </div>
+
+                    <!-- Son & Daughter-in-law Card -->
+                    <div class="family-card" data-aos="fade-up" data-delay="100">
+                        <div class="family-badge">Son & Daughter-in-Law</div>
+                        <div class="family-avatar">
+                            <img src="photos/vijay family.jpeg" alt="Ajay & Shuchi Aggarwal" class="family-avatar-img">
+                        </div>
+                        <h3 class="family-name">Ajay & Shuchi Aggarwal</h3>
+                        <p class="family-role">Carrying the Family Legacy Forward</p>
+                        <p class="family-desc">
+                            Bringing strength, love, and immense joy to the family with their devoted partnership.
+                        </p>
+                        <div class="family-meta">
+                            <span>💍 Anniversary: <em>[Date to be updated]</em></span>
+                        </div>
+                    </div>
+
+                    <!-- Grandson Card -->
+                    <div class="family-card" data-aos="fade-up" data-delay="200">
+                        <div class="family-badge">Grandson</div>
+                        <div class="family-avatar">
+                            <img src="photos/vijay & agam.jpeg" alt="Agam Aggarwal" class="family-avatar-img">
+                        </div>
+                        <h3 class="family-name">Agam Aggarwal</h3>
+                        <p class="family-role">The Sunshine of the House</p>
+                        <p class="family-desc">
+                            The beloved grandson who brings endless laughter, affection, and bright smiles to grandparents Dr. Vijay & Dr. Sunita.
+                        </p>
+                        <div class="family-meta">
+                            <span>🎂 Birthday: <em>[Date to be updated]</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="section-tag">PREVIOUS & PRESENT MEMORIES</span>
+                    <h2 class="section-title">Precious Moments & Gallery</h2>
+                    <p class="section-subtitle">Moments captured over 46 years of togetherness</p>
+                    <div class="gold-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Photo 1: Vijay & Sunita -->
+                    <div class="gallery-card" data-aos="zoom-in" onclick="openLightbox('46 Sapphire Years Together', 'Dr. Vijay Aggarwal & Dr. Sunita Aggarwal — Celebrating 46 Years of Love & Healing.', 'photos/vijay sunita.jpeg')">
+                        <div class="gallery-img-wrapper">
+                            <img src="photos/vijay sunita.jpeg" alt="Dr. Vijay & Dr. Sunita Aggarwal" class="gallery-img">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>46 Sapphire Years Together</h4>
+                            <p>Dr. Vijay & Dr. Sunita Aggarwal</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2: Family Photo -->
+                    <div class="gallery-card" data-aos="zoom-in" data-delay="100" onclick="openLightbox('Generations of Happiness', 'Cherished family togetherness with Dr. Vijay, Dr. Sunita, Ajay, Shuchi, and grandson Agam.', 'photos/vijay family.jpeg')">
+                        <div class="gallery-img-wrapper">
+                            <img src="photos/vijay family.jpeg" alt="Vijay Family Together" class="gallery-img">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Generations of Happiness</h4>
+                            <p>The Aggarwal Family</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3: Dadu & Agam -->
+                    <div class="gallery-card" data-aos="zoom-in" data-delay="200" onclick="openLightbox('Dadu & Agam', 'Precious bonding moments between Dr. Vijay Aggarwal & grandson Agam.', 'photos/vijay & agam.jpeg')">
+                        <div class="gallery-img-wrapper">
+                            <img src="photos/vijay & agam.jpeg" alt="Dr. Vijay & Agam" class="gallery-img">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Dadu & Agam</h4>
+                            <p>Precious Grandfather & Grandson Moments</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4: Sunita & Suman -->
+                    <div class="gallery-card" data-aos="zoom-in" data-delay="300" onclick="openLightbox('Lifelong Friendship', 'Cherished moments with Dr. Sunita Aggarwal & Suman.', 'photos/sunita & suman.jpeg')">
+                        <div class="gallery-img-wrapper">
+                            <img src="photos/sunita & suman.jpeg" alt="Dr. Sunita & Suman" class="gallery-img">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Lifelong Friendship</h4>
+                            <p>Dr. Sunita & Suman</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5: Other Celebration -->
+                    <div class="gallery-card" data-aos="zoom-in" data-delay="400" onclick="openLightbox('Celebration & Memories', 'Beautiful anniversary celebration and memory moments.', 'photos/other1.jpeg')">
+                        <div class="gallery-img-wrapper">
+                            <img src="photos/other1.jpeg" alt="Celebration Memories" class="gallery-img">
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Celebration & Memories</h4>
+                            <p>Joyful Moments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishes & Blessings Wall Section -->
+        <section class="wishes-section" id="wishes">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="section-tag">HEARTFELT BLESSINGS</span>
+                    <h2 class="section-title">Anniversary Wish Wall</h2>
+                    <p class="section-subtitle">Warm wishes & blessings from family and loved ones</p>
+                    <div class="gold-divider">✦ ✦ ✦</div>
+                </div>
+
+                <div class="blessings-grid">
+                    <!-- Wish 1: Ajay & Shuchi -->
+                    <div class="wish-card special-wish" data-aos="fade-up">
+                        <div class="wish-header">
+                            <span class="wish-author">Ajay & Shuchi</span>
+                            <span class="wish-tag">💖✨</span>
+                        </div>
+                        <p class="wish-text">
+                            "Happy 46th Anniversary Papa & Mummy! Thank you for giving us a home filled with love, laughter, and wisdom. You both are our biggest strength, role models, and guiding light!"
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+
+                    <!-- Wish 2: Agam -->
+                    <div class="wish-card special-wish" data-aos="fade-up" data-delay="100">
+                        <div class="wish-header">
+                            <span class="wish-author">Agam</span>
+                            <span class="wish-tag">👦🌟</span>
+                        </div>
+                        <p class="wish-text">
+                            "Happy 46th Anniversary Dadu & Dadi! I love you so much. Thank you for all the sweet treats, warmest hugs, and wonderful bedtime stories!"
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+
+                    <!-- Wish 3: Ravi & Suman -->
+                    <div class="wish-card" data-aos="fade-up" data-delay="200">
+                        <div class="wish-header">
+                            <span class="wish-author">Ravi & Suman</span>
+                            <span class="wish-tag">💐❤️</span>
+                        </div>
+                        <p class="wish-text">
+                            "Dearest Vijay & Sunita, completing 46 glorious years of marriage is a true testament to love and devotion. Having shared 3 decades of deep friendship with you both, we have seen how gracefully you have walked this journey together. Wishing you endless health, joy, and togetherness always!"
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+
+                    <!-- Wish 4: Rajat & Swati -->
+                    <div class="wish-card" data-aos="fade-up" data-delay="300">
+                        <div class="wish-header">
+                            <span class="wish-author">Rajat & Swati</span>
+                            <span class="wish-tag">🌸🥂</span>
+                        </div>
+                        <p class="wish-text">
+                            "Wishing Uncle Dr. Vijay & Aunty Dr. Sunita a very Happy 46th Marriage Anniversary! Your journey of medicine, family values, and love is an inspiration to all of us. May your bond grow even stronger with every passing year!"
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+
+                    <!-- Wish 5: Gourav -->
+                    <div class="wish-card" data-aos="fade-up" data-delay="400">
+                        <div class="wish-header">
+                            <span class="wish-author">Gourav</span>
+                            <span class="wish-tag">✨👑</span>
+                        </div>
+                        <p class="wish-text">
+                            "Warmest congratulations Dr. Vijay Uncle & Dr. Sunita Aunty on completing 46 wonderful years together! Wishing you continuous happiness, great health, and many more golden years ahead."
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+
+                    <!-- Wish 6: Virender & Neelam -->
+                    <div class="wish-card" data-aos="fade-up" data-delay="500">
+                        <div class="wish-header">
+                            <span class="wish-author">Virender & Neelam</span>
+                            <span class="wish-tag">🌺💖</span>
+                        </div>
+                        <p class="wish-text">
+                            "Heartiest congratulations to Dr. Vijay & Dr. Sunita on your 46th Marriage Anniversary! May God shower His choicest blessings upon you both with lifelong good health, prosperity, and joy."
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+
+                    <!-- Wish 7: Puneet, Sumiti, Prisha & Khushi (Positioned at the end) -->
+                    <div class="wish-card" data-aos="fade-up" data-delay="600">
+                        <div class="wish-header">
+                            <span class="wish-author">Puneet, Sumiti, Prisha & Khushi</span>
+                            <span class="wish-tag">💐✨</span>
+                        </div>
+                        <p class="wish-text">
+                            "Dearest Dr. Vijay Uncle & Dr. Sunita Aunty, wishing you a very Happy 46th Marriage Anniversary! Your journey of love, medicine, and family togetherness is truly an inspiration to all of us. May God bless you both with everlasting health, happiness, and joy!"
+                        </p>
+                        <span class="wish-date">19th Sep 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightboxDirect()">&times;</button>
+            <div class="lightbox-body" id="lightboxBody">
+                <img id="lightboxImg" class="lightbox-img" src="" alt="Enlarged view">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-brand">
+                <h2>Dr. Vijay & Dr. Sunita Aggarwal</h2>
+                <p class="footer-tagline">46 Years of Love • Medicine • Togetherness with Ajay, Shuchi & Agam</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#story">Our Story</a>
+                <a href="#family">Our Family</a>
+                <a href="#milestones">46 Years</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#wishes">Blessings</a>
+            </div>
+
+            <div class="hosting-badge-footer">
+                <span>Hosted Free on <strong>GitHub Pages</strong> 🚀</span>
+            </div>
+
+            <p class="copyright">
+                Crafted with ❤️ to celebrate 46 Sapphire Years. September 19, 1980 – 2026.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
