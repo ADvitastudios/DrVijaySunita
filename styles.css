@@ -309,7 +309,7 @@ a {
     transition: var(--transition);
 }
 
-/* Hero Section with Vibrant Background Image */
+/* Hero Section with Vibrant Background Image (Smooth Scroll, Not Fixed) */
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -318,7 +318,7 @@ a {
     justify-content: center;
     padding: 130px 1.5rem 70px;
     text-align: center;
-    background: linear-gradient(180deg, rgba(25, 6, 12, 0.72) 0%, rgba(90, 20, 32, 0.65) 50%, rgba(20, 5, 10, 0.85) 100%), url('photos/vijay sunita.jpeg') center/cover no-repeat fixed;
+    background: linear-gradient(180deg, rgba(25, 6, 12, 0.72) 0%, rgba(90, 20, 32, 0.65) 50%, rgba(20, 5, 10, 0.85) 100%), url('photos/vijay sunita.jpeg') center/cover no-repeat;
     overflow: hidden;
     z-index: 2;
     color: #FFFFFF;
@@ -548,6 +548,7 @@ a {
     left: -25px;
 }
 
+/* Upgraded Rich Card Styling for Journey Timeline */
 .timeline-content {
     background: linear-gradient(135deg, #FFFDF9 0%, #FAF0E4 100%);
     padding: 2rem 2.2rem;
@@ -601,59 +602,65 @@ a {
     background: linear-gradient(135deg, #FFFDF9 0%, #FAF1E4 100%);
     border: 2px solid var(--color-gold);
     border-radius: var(--radius-lg);
-    padding: 3.5rem 3rem;
+    padding: 3rem;
     margin-bottom: 2.8rem;
-    text-align: center;
     position: relative;
     box-shadow: var(--shadow-gold);
     overflow: hidden;
 }
 
-/* Featured Tribute Card with Background Photo: vijay sunita 2.jpeg */
-.featured-poem-card.tribute-card {
-    background: linear-gradient(180deg, rgba(20, 5, 12, 0.82) 0%, rgba(90, 20, 32, 0.78) 50%, rgba(15, 3, 8, 0.88) 100%), url('photos/vijay sunita 2.jpeg') center/cover no-repeat;
-    color: #FFFFFF;
+/* Split 2-Column Tribute Card (Photo Left, Text Right) */
+.featured-poem-card.tribute-split-card {
+    background: linear-gradient(135deg, #FFFDF9 0%, #FAF1E4 100%);
+    border-color: var(--color-gold);
 }
 
-.featured-poem-card.tribute-card .poem-header h3 {
-    color: #FFFFFF;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.5);
+.tribute-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2.5rem;
+    align-items: center;
 }
 
-.featured-poem-card.tribute-card .poem-byline {
-    color: var(--color-gold-light);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+.tribute-img-col {
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 3px solid var(--color-gold);
+    box-shadow: var(--shadow-gold);
 }
 
-.featured-poem-card.tribute-card .poem-stanza {
-    color: #FFFDF9;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+.tribute-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-/* Family Union Card with Fixed Parallax Background Photo: family & friends.jpeg */
-.featured-poem-card.family-union-card {
-    background: linear-gradient(180deg, rgba(15, 4, 8, 0.82) 0%, rgba(85, 18, 30, 0.78) 50%, rgba(15, 4, 8, 0.9) 100%), url('photos/family & friends.jpeg') center/cover no-repeat fixed;
-    border-color: var(--color-gold-light);
-    margin-top: 2.8rem;
-    margin-bottom: 0;
-    color: #FFFFFF;
+.tribute-split-card:hover .tribute-img {
+    transform: scale(1.04);
 }
 
-.featured-poem-card.family-union-card .poem-header h3 {
-    color: #FFFFFF;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.5);
+.tribute-text-col {
+    text-align: left;
 }
 
-.featured-poem-card.family-union-card .poem-byline {
-    color: var(--color-gold-light);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+.tribute-text-col .poem-header h3 {
+    font-size: 2.1rem;
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
 }
 
-.featured-poem-card.family-union-card .poem-stanza {
-    color: #FFFDF9;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+.tribute-text-col .poem-byline {
+    font-family: var(--font-subheading);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--color-gold-dark);
+    margin-bottom: 1.5rem;
 }
 
+/* Clean Centered Badge */
 .poem-badge {
     position: absolute;
     top: -15px;
@@ -661,14 +668,17 @@ a {
     transform: translateX(-50%);
     background: var(--color-primary);
     color: var(--color-gold-light);
-    font-size: 0.82rem;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
     font-weight: 700;
     padding: 0.4rem 1.4rem;
     border-radius: var(--radius-full);
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     box-shadow: 0 4px 12px rgba(122, 28, 44, 0.25);
     z-index: 5;
+    text-align: center;
+    white-space: nowrap;
+    max-width: 92%;
 }
 
 .poem-header h3 {
@@ -682,18 +692,18 @@ a {
     font-size: 1.15rem;
     font-style: italic;
     color: var(--color-gold-dark);
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 }
 
 .poem-body {
     display: flex;
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 1.5rem;
 }
 
 .poem-stanza {
     font-family: var(--font-subheading);
-    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    font-size: clamp(1.1rem, 2.2vw, 1.38rem);
     font-style: italic;
     color: var(--color-text-dark);
     line-height: 1.8;
@@ -716,7 +726,7 @@ a {
     overflow: hidden;
 }
 
-/* Suman to Sunita Card with Background Photo: suman & sunita 2.jpeg */
+/* Suman to Sunita Card with Background Photo (Smooth Scroll, Not Fixed) */
 .poem-card-sub.suman-sunita-card {
     background: linear-gradient(180deg, rgba(20, 5, 12, 0.82) 0%, rgba(80, 18, 30, 0.78) 100%), url('photos/suman & sunita 2.jpeg') center/cover no-repeat;
     color: #FFFFFF;
@@ -770,6 +780,31 @@ a {
     font-size: 0.82rem;
     font-weight: 600;
     color: var(--color-gold-dark);
+}
+
+/* Family Union Card with Background Photo (Smooth Scroll, Not Fixed) */
+.featured-poem-card.family-union-card {
+    background: linear-gradient(180deg, rgba(15, 4, 8, 0.82) 0%, rgba(85, 18, 30, 0.78) 50%, rgba(15, 4, 8, 0.9) 100%), url('photos/family & friends.jpeg') center/cover no-repeat;
+    border-color: var(--color-gold-light);
+    margin-top: 2.8rem;
+    margin-bottom: 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.featured-poem-card.family-union-card .poem-header h3 {
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.featured-poem-card.family-union-card .poem-byline {
+    color: var(--color-gold-light);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.featured-poem-card.family-union-card .poem-stanza {
+    color: #FFFDF9;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Family Section */
@@ -1191,6 +1226,19 @@ a {
 }
 
 /* Responsive Media Queries */
+@media (max-width: 992px) {
+    .tribute-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
+    .tribute-img-col {
+        height: 280px;
+    }
+    .tribute-text-col {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .featured-poem-card {
         padding: 2.2rem 1.5rem;
